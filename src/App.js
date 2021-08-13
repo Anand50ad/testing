@@ -2,10 +2,16 @@ import React from 'react';
 import './App.css';
 import Todo from './Components/todo';
 function App() {
+const todos = [
+  {id:1, title:"bring grocery", status:false}
+
+]
   return (
     <div className="App">
- <Todo />
-    </div>
+{todos.map((todo)=>{
+  return (<Todo todo={todo}/>)
+})}
+</div>
   );
 }
 
